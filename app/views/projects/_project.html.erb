@@ -4,19 +4,25 @@
 	</div>
 
 	<div class="panel-body">
-		<h5><b>Description:</b></h5>
-    	<%= raw(project.description.gsub(/\n/, '<br/>')) %>
-    	<h5><b>Learnings:</b></h4>
-    	<%= raw(project.learning.gsub(/\n/, '<br/>')) %>
-    	<% if (project.external_link.empty? != true) ||  (project.github.empty? != true) %>
-    	<hr>
-    	<% end %>
-    	<% unless project.external_link.empty? %>
-    		<p><%= link_to content_tag(:i, '', class: 'fa fa-external-link') + ' ' + project.external_link, project.external_link %></p>
-    	<% end %>
-    	<% unless project.github.empty? %>
-    		<p><%= link_to content_tag(:i, '', class: 'fa fa-github-alt') + ' ' + project.github, project.github %></p>
-    	<% end %>
+		<div class="row">
+			<div class="col-md-6">
+				<h5><b>Description:</b></h5>
+		    	<%= raw(project.description.gsub(/\n/, '<br/>')) %>
+    		</div>
+    		<div class="col-md-6">
+		    	<h5><b>Learnings:</b></h4>
+		    	<%= raw(project.learning.gsub(/\n/, '<br/>')) %>
+		    	<% if (project.external_link.empty? != true) ||  (project.github.empty? != true) %>
+		    	<hr>
+		    	<% end %>
+		    	<% unless project.external_link.empty? %>
+		    		<p><%= link_to content_tag(:i, '', class: 'fa fa-external-link') + ' ' + project.external_link, project.external_link %></p>
+		    	<% end %>
+		    	<% unless project.github.empty? %>
+		    		<p><%= link_to content_tag(:i, '', class: 'fa fa-github-alt') + ' ' + project.github, project.github %></p>
+		    	<% end %>
+    		</div>
+    	</div>
 	</div>
 
 	<% if admin_signed_in? %>
