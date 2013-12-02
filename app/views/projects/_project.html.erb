@@ -9,10 +9,10 @@
     	<h5><b>Learnings:</b></h4>
     	<%= raw(project.learning.gsub(/\n/, '<br/>')) %>
     	<% unless project.external_link.empty? %>
-    		<p><%= link_to content_tag(:i, '', class: 'fa fa-external-link') + project.external_link, project.external_link %></p>
+    		<p><%= link_to content_tag(:i, '', class: 'fa fa-external-link') + ' ' + project.external_link, project.external_link %></p>
     	<% end %>
     	<% unless project.github.empty? %>
-    		<p><%= link_to content_tag(:i, '', class: 'fa fa-github-alt') + project.github, project.github %></p>
+    		<p><%= link_to content_tag(:i, '', class: 'fa fa-github-alt') + ' ' + project.github, project.github %></p>
     	<% end %>
 	</div>
 
