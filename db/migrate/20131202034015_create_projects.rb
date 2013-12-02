@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.text :learning
-      t.string :github
+      t.string :github, default: ""
 
       t.timestamps
     end

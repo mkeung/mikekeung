@@ -1,20 +1,8 @@
 <% provide(:title, "Update project") %>
 
-<div class="row">
+<div class="row well">
   <%= form_for(@project) do |f| %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-
-    <%= f.label :learning %>
-    <%= f.text_area :learning %>
-
-    <%= f.label :github %>
-    <%= f.text_field :github %>
-
+    <%= render 'fields', f: f %>
     <%= f.submit "update project", class: "btn btn-primary" %>
   <% end %>
 </div>

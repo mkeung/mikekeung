@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
 	private
 		def project_params
 			params.require(:project).permit(:title, :description,
-					:learning, :github)
+					:learning, :github, :external_link, :completed)
 		end
 
 		def admin_user
