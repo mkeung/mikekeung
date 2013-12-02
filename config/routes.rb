@@ -2,6 +2,9 @@ Mikekeung::Application.routes.draw do
 
   devise_for :admins
   root  'static_pages#home'
+
+  resources :projects
+  
   match '/home',   to: 'static_pages#home',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
