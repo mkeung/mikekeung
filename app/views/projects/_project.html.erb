@@ -16,10 +16,10 @@
 		    	<hr>
 		    	<% end %>
 		    	<% unless project.external_link.empty? %>
-		    		<p><%= link_to content_tag(:i, '', class: 'fa fa-external-link') + ' ' + project.external_link, project.external_link %></p>
+		    		<p><%= link_to content_tag(:i, '', class: 'fa fa-external-link') + ' ' + project.external_link, project.external_link, target: "_blank" %></p>
 		    	<% end %>
 		    	<% unless project.github.empty? %>
-		    		<p><%= link_to content_tag(:i, '', class: 'fa fa-github-alt') + ' ' + project.github, project.github %></p>
+		    		<p><%= link_to content_tag(:i, '', class: 'fa fa-github-alt') + ' ' + project.github, project.github, target: "_blank" %></p>
 		    	<% end %>
     		</div>
     	</div>
