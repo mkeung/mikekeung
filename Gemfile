@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 3.0'
 gem 'font-awesome-sass', '~> 4.0.1'
 gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'devise'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
