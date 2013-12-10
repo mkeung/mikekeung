@@ -41,9 +41,4 @@ class ProjectsController < ApplicationController
 			params.require(:project).permit(:title, :description,
 					:learning, :github, :external_link, :completed)
 		end
-
-		def admin_user
-			redirect_to root_url unless admin_signed_in?
-		end
-
 end

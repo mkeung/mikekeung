@@ -1,0 +1,8 @@
+<% provide(:title, "Update book") %>
+
+<div class="row well">
+  <%= form_for(@book) do |f| %>
+    <%= render 'fields', f: f %>
+    <%= f.submit "update book", class: "btn btn-primary" %>
+  <% end %>
+</div>

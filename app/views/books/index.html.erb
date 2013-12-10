@@ -1,0 +1,17 @@
+<% provide(:title, "What I'm reading / have read") %>
+
+<% if admin_signed_in? %>
+  <div class="row well">
+    <%= form_for(@new_book) do |f| %>
+      <%= render 'fields', f: f %>
+      <%= f.submit "add book", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+<% end %>
+
+
+<div class="row">
+  <% @books.each do |book| %>
+    <%= render book %>
+  <% end %>
+</div>

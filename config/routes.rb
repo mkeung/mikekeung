@@ -4,6 +4,7 @@ Mikekeung::Application.routes.draw do
   root  'static_pages#home'
 
   resources :projects
+  resources :books
   
   match '/home',   to: 'static_pages#home',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'

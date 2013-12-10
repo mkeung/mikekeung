@@ -5,7 +5,7 @@
 		<li><%= link_to "projects / tasks", projects_path %></li>
 		<li><%= link_to "important things", important_path %></li>
 		<li><%= link_to "inspirations", "#" %></li>
-		<li><%= link_to "reading list", "#" %></li>
+		<li><%= link_to "reading list", books_path %></li>
 		<li><%= link_to "contact me", contact_path %></li>
 		<% if admin_signed_in? %>
 			<li><%= link_to 'log out', destroy_admin_session_path, method: :delete %></li>
