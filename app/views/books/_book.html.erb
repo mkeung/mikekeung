@@ -5,9 +5,12 @@
 
 	<div class="panel-body">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<h5><b>Review:</b></h5>
 		    	<%= raw(book.review.gsub(/\n/, '<br/>')) %>
+    		</div>
+    		<div class="col-md-3">
+    			<%= image_tag book.image_url(:thumb).to_s, class: "img-responsive" %>
     		</div>
     	</div>
 	</div>
